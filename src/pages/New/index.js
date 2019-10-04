@@ -17,10 +17,9 @@ function New({ history }) {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    const user_id = localStorage.getItem("user");
 
     const data = new FormData();
-
-    const user_id = localStorage.getItem("user");
     data.append("thumbnail", thumbnail);
     data.append("company", company);
     data.append("techs", techs);
